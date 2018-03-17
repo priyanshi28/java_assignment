@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean id="stringId" class="java.lang.String">
+        <constructor-arg>
+            <value>Antony</value>
+        </constructor-arg>
+    </bean>
+ 
+    <bean id="emp" class="com.candidjava.Emp">
+        <property name="empList">
+            <list>
+                <value>Deepa</value>
+                <value>Kalai</value>
+                <value>Mathan</value>
+                <ref local="stringId" />
+            </list>
+        </property>
+    </bean>
+</beans>
